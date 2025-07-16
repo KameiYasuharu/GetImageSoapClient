@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://example.com/apigateway/webservice"
+           xmlns:tns="http://example.com/apigateway/webservice"
+           elementFormDefault="qualified">
+
+    <xs:element name="GetImageRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="imageName" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="GetImageResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="imageData" type="xs:base64Binary"/>
+                <xs:element name="imageName" type="xs:string"/>
+                <xs:element name="mimeType" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
